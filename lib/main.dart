@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:i100daysofcodei/day1.dart';
+import 'package:i100daysofcodei/day2.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Day1(),
+      home: Day2(),
     );
   }
 }
