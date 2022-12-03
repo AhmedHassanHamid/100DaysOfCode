@@ -9,7 +9,7 @@ class Day3 extends StatefulWidget {
 
 class _Day3State extends State<Day3> with SingleTickerProviderStateMixin {
   late AnimationController _controller;
-  late Animation _animation;
+  late Animation<double> _animation;
 
   @override
   void initState() {
@@ -40,14 +40,14 @@ class _Day3State extends State<Day3> with SingleTickerProviderStateMixin {
             _controller.reverse();
           },
           onLongPress: () {
-            _controller.repeat();
+            _controller.repeat(reverse: true);
           },
           child: Center(
             child: Stack(
               alignment: AlignmentDirectional.center,
               children: <Widget>[
                 FadeTransition(
-                  opacity: Tween(begin: 0.0, end: 1.0).animate(_controller),
+                  opacity: _animation,
                   child: Container(
                     width: 250,
                     height: 250,
