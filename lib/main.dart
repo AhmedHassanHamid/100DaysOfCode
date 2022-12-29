@@ -24,6 +24,7 @@ import 'package:i100daysofcodei/day22.dart';
 import 'package:i100daysofcodei/day23.dart';
 import 'package:i100daysofcodei/day24.dart';
 import 'package:i100daysofcodei/day25.dart';
+import 'package:i100daysofcodei/day26.dart';
 
 void main() {
   runApp(const MyApp());
@@ -41,7 +42,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Day25(),
+      home: Day26(),
     );
   }
 }
