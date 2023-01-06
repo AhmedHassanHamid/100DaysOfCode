@@ -96,32 +96,7 @@ class _Day34State extends State<Day34> {
         ),
         ],
       ),
-      // body: Center(
-      //   child: ElevatedButton(
-      //     child: Text("show SnackBar!"),
-      //     onPressed: () => ScaffoldMessenger.of(context).showSnackBar(
-      //       SnackBar(
-      //         content: Image.asset("images/coffee.jpg"),
-      //         behavior: SnackBarBehavior.fixed,
-      //         duration: Duration(seconds: 2),
-      //         elevation: 10,
-      //         onVisible: () => print("SnackBar Visible"),
-      //         backgroundColor: Colors.black38,
-      //         action: SnackBarAction(
-      //           label: "Ok",
-      //           textColor: Colors.white,
-      //           onPressed: () {
-      //             setState(() {
-      //               _bgColor = _bgColor == Colors.pinkAccent
-      //                   ? Colors.deepOrange
-      //                   : Colors.pinkAccent;
-      //             });
-      //           },
-      //         ),
-      //       ),
-      //     ),
-      //   ),
-      // ),
+      
     );
   }
 }
