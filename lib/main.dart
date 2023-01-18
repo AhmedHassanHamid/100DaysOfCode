@@ -1,3 +1,8 @@
+
+
+import 'dart:io';
+
+import 'package:device_info_plus/device_info_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:i100daysofcodei/day1.dart';
 import 'package:i100daysofcodei/day2.dart';
@@ -43,8 +48,32 @@ import 'package:i100daysofcodei/day41.dart';
 import 'package:i100daysofcodei/day42.dart';
 import 'package:i100daysofcodei/day43.dart';
 import 'package:i100daysofcodei/day44.dart';
+import 'package:i100daysofcodei/day45.dart';
 
-void main() {
+Future<void> main() async{
+   WidgetsFlutterBinding.ensureInitialized();
+
+  DeviceInfoPlugin deviceInfo = DeviceInfoPlugin();
+
+  if (Platform.isAndroid) {
+    AndroidDeviceInfo info = await deviceInfo.androidInfo;
+    print(info);
+  } else if (Platform.isIOS) {
+    IosDeviceInfo info = await deviceInfo.iosInfo;
+    print(info.toMap());
+  } else if (Platform.isLinux) {
+    LinuxDeviceInfo info = await deviceInfo.linuxInfo;
+    print(info.toMap());
+  } else if (Platform.isMacOS) {
+    MacOsDeviceInfo info = await deviceInfo.macOsInfo;
+    print(info.toMap());
+  } else if (Platform.isWindows) {
+    WindowsDeviceInfo info = await deviceInfo.windowsInfo;
+    print(info.toMap());
+  }
+
+  // final info = await deviceInfo.deviceInfo;
+  // print(info.toMap());
   runApp(const MyApp());
 }
 
@@ -60,7 +89,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Day44(),
+      home: Day45(),
     );
   }
 }
